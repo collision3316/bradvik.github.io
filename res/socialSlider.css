@@ -1,0 +1,163 @@
+/**
+* @package		JJ_Social_Slider
+* @author		JoomJunk
+* @copyright	Copyright (C) 2011 - 2016 JoomJunk. All Rights Reserved
+* @license		http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+.jj_sl_navigation {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    z-index: 9999;
+}
+.jj_sl_navigation li {
+	padding: 1px 0px 1px 0px;
+    overflow: hidden;
+	direction: ltr;
+	border: 0;
+	display: block;
+	float: none;
+}
+
+/* Left */
+.jj_sl_navigation.left {
+	left: -140px;
+}
+.jj_sl_navigation.left li {
+	left: 0;
+	position: relative;
+	
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+	
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+.jj_sl_navigation.left li:hover {
+	-webkit-transform: translateX(140px);
+	-moz-transform: translateX(140px);
+	transform: translateX(140px);
+
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+.jj_sl_navigation.left li a {
+	padding: 11px 0px 11px 10px;
+	margin-left: -2px;
+}
+.jj_sl_navigation.left .jj_sprite,
+.jj_sl_navigation.left .jj_sprite_custom {
+	float: right;
+	right: 3px;
+}
+
+/* Right */
+.jj_sl_navigation.right { 
+	right: -140px;
+}
+.jj_sl_navigation.right li {
+	right: 0;
+	position: relative;
+
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+.jj_sl_navigation.right li:hover {
+	-webkit-transform: translateX(-140px);
+	-moz-transform: translateX(-140px);
+	transform: translateX(-140px);
+
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+.jj_sl_navigation.right li a {
+	padding: 11px 10px 11px 0px;
+	margin-left: 0;
+}
+.jj_sl_navigation.right .jj_sprite,
+.jj_sl_navigation.right .jj_sprite_custom  {
+	float: left;
+	left: 3px;
+}
+
+
+.jj_sl_navigation li a {
+    display: block;
+    width: 170px;
+	text-decoration: none;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: inherit;
+	box-sizing: content-box;
+
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;	
+}
+.jj_sl_navigation li a:focus {
+	outline: 0;
+	border: 0;
+}
+.jj_sl_navigation li a .jj_social_text {
+	display: inline-block;
+	width: 130px;
+}
+.jj_sl_navigation .jj_sl_facebook a:hover{ background-color: #3B5998; }
+.jj_sl_navigation .jj_sl_twitter a:hover{ background-color: #4099FF; }
+.jj_sl_navigation .jj_sl_google a:hover{ background-color: #DB4A39; }
+.jj_sl_navigation .jj_sl_myspace a:hover{ background-color: #3B64B3; }
+.jj_sl_navigation .jj_sl_youtube a:hover{ background-color: #CC252C; }
+.jj_sl_navigation .jj_sl_linkedin a:hover{ background-color: #4F93B3; }
+.jj_sl_navigation .jj_sl_steam a:hover{ background-color: #111111; }
+.jj_sl_navigation .jj_sl_lastfm a:hover{ background-color: #bf0d1c; }
+.jj_sl_navigation .jj_sl_pinterest a:hover{ background-color: #b61d23; }
+.jj_sl_navigation .jj_sl_soundcloud a:hover{ background-color: #ff5419; }
+.jj_sl_navigation .jj_sl_tumblr a:hover{ background-color: #304e6c; }
+.jj_sl_navigation .jj_sl_github a:hover{ background-color: #222222; }
+.jj_sl_navigation .jj_sl_flickr a:hover{ background-color: #ff0084; }
+.jj_sl_navigation .jj_sl_rss a:hover{ background-color: #FF6600; }
+.jj_sl_navigation .jj_sl_vimeo a:hover{ background-color: #1BB7EA; }
+
+.jj_sl_navigation a:hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.jj_sl_navigation .jj_sprite,
+.jj_sl_navigation .jj_sprite_custom {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+}
+.jj_sprite.jj_facebook { background-position: 0 0; }
+.jj_sprite.jj_flickr { background-position: -32px 0; }
+.jj_sprite.jj_github { background-position: -64px 0; }
+.jj_sprite.jj_soundcloud { background-position: -96px 0; }
+.jj_sprite.jj_google { background-position: 0 -32px; }
+.jj_sprite.jj_lastfm { background-position: -32px -32px; }
+.jj_sprite.jj_linkedin { background-position: -64px -32px; }
+.jj_sprite.jj_steam { background-position: -96px -32px; }
+.jj_sprite.jj_myspace { background-position: 0 -64px; }
+.jj_sprite.jj_pinterest { background-position: -32px -64px; }
+.jj_sprite.jj_rss { background-position: -64px -64px; }
+.jj_sprite.jj_tumblr { background-position: -96px -64px; }
+.jj_sprite.jj_twitter { background-position: 0 -96px; }
+.jj_sprite.jj_vimeo { background-position: -32px -96px; }
+.jj_sprite.jj_youtube { background-position: -64px -96px; }
+.jj_sprite.jj_z-custom { background-position: -96px -96px; }
