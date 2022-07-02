@@ -1,0 +1,58 @@
+.subject{
+   padding-left: 2%;
+}
+/* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 30px;
+    width: 728px;
+    margin: 0 auto;
+  }
+   
+  /* Style each of the sides
+  with a fixed width and height */
+  .slide {
+    float: left;
+    height: 20px;
+    width: 728px;
+  }
+   
+  /* Add animation to the slides */
+  .slide-wrapper {
+     
+  /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(1000px * 4);
+   
+  /* Specify the animation with the
+    duration and speed */
+    animation: slide 20s ease infinite;
+  }
+   
+  /* Define the animation
+  for the slideshow */
+  @keyframes slide {
+     
+  /* Calculate the margin-left for
+    each of the slides */
+    20% {
+      margin-left: 0px;
+    }
+   
+    40% {
+      margin-left: calc(-728px * 1);
+    }
+   
+    60% {
+      margin-left: calc(-728px * 2);
+    }
+   
+    80% {
+      margin-left: calc(-728px * 3);
+    }
+  }
+  @media (max-width: 767px) {
+    .hidden-mobile {
+      display: none;
+    }
+  }
